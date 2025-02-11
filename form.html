@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="formtest.css">
+  <title>Job Application Form</title>
+</head>
+
+<body>
+  <div id="bg-box">
+    <div id="outer-box">
+      <div id="title-box">
+        <h1 id="title">Job Application Form</h1>
+        <p id="description">You can fill the important details below.</p>
+      </div>
+      <div id="form-box">
+        <form id="survey-form">
+          <label for="name" id="name-label">Name</label>
+          <input type="text" placeholder="Enter your name" required aria-label="Full Name" autocomplete="name" id="name" class="in_put">
+
+          <label for="email" id="email-label">Email Id</label>
+          <input type="email" placeholder="Enter email id" required id="email" class="in_put" aria-label="Email Address">
+
+
+          <label for="number">Mobile Number</label>
+          <input type="tel" placeholder="Enter Mobile number" required="required" id="number" pattern="[0-9]{10,15}" class="in_put">
+
+
+
+
+          <div id="for-sel-box">
+            <label for="dropdown-country">Country</label>
+            <select id="dropdown-country" class="dropdown" required>
+              <option value="India">India</option>
+              <option value="France">France</option>
+              <option value="Germany">Germany</option>
+              <option value="US">US</option>
+              <option value="South Korea">South Korea</option>
+              <option value="Japan">Japan</option>
+            </select>
+
+            <label for="dropdown-position">What Position Are You Applying For?</label>
+            <select id="dropdown-position" class="dropdown" required>
+              <option value="Web Developer">Web Developer</option>
+              <option value="App Developer">App Developer</option>
+              <option value="Web Designer">Web Designer</option>
+              <option value="Data Scientist">Data Scientist</option>
+              <option value="Data Analyst">Data Analyst</option>
+              <option value="Full Stack Developer">Full Stack Developer</option>
+            </select>
+
+          </div>
+
+          <label for="relocate-yes">Are you willing to relocate?</label>
+          <div id="radio-relocate" class="radio-box">
+            <p><input type="radio" name="relocate" class="one" id="relocate-yes" value="yes" required>Yes</p>
+            <p><input type="radio" name="relocate" class="one" id="relocate-no" value="no">No</p>
+          </div>
+
+          <label for="employed-yes">Are you currently employed?</label>
+          <div id="employed-status" class="radio-box">
+            <p><input type="radio" name="employed-status" class="one" id="employed-yes" value="yes" required>Yes</p>
+            <p><input type="radio" name="employed-status" class="one" id="employed-no" value="no">No</p>
+          </div>
+
+          <div id="upload-box">
+            <label for="choose_file">Upload Your Resume</label>
+            <input type="file" accept=".pdf" name="Upload" id="choose_file">
+            <button id="upload_btn" type="button">Upload</button>
+          </div>
+
+          <label for="write">Write any comments and suggestions here:</label>
+          <textarea name="comments" id="write" placeholder="Enter your comments or suggestions" maxlength="300"></textarea>
+
+
+          <div id="final_check">
+            <label>Have you filled the above field carefully?</label>
+            <input type="checkbox" name="q1" value="q1" required>
+           
+              <label>Do you want to submit the application?</label>
+              <input type="checkbox" name="q2" value="q2" required>
+            
+          </div>
+          <button type="submit" id="submit">Submit</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
