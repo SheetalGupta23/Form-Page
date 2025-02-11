@@ -1,0 +1,265 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+#bg-box {
+	height: 100vh;
+	overflow-y: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#bg-box::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("https://media.istockphoto.com/id/1446046938/photo/sticky-note-with-job-search-app.jpg?s=612x612&w=0&k=20&c=P_7o_1UjPaoJxS-3bYff6Pl-fdMZ69AI8qsf2JD_rtQ=") no-repeat center center/cover;
+	filter: blur(7px);
+	z-index: -1;
+}
+
+#outer-box {
+	height: auto;
+	width: 70%;
+	margin-top: 320px;
+}
+
+#title-box {
+	height: auto;
+	width: 600px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 10px;
+	margin: 20px auto;
+}
+
+#form-box {
+	height: auto;
+	width: 600px;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	margin: 0 auto;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#form-box label {
+	font-size: 18px;
+	color: white;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.in_put {
+	height: 35px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	border: none;
+	outline: none;
+	color: white;
+	font-size: 15px;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+
+}
+
+.in_put:focus {
+	box-shadow: 0px 0px 0px 2px rgb(129, 250, 129);
+}
+
+#for-sel-box {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	row-gap: 10px;
+}
+
+.dropdown{
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	height: 35px;
+	width: 350px;
+	outline: none;
+	border: none;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+#dropdown-country:focus,
+#dropdown-position:focus {
+	box-shadow: 0px 0px 0px 1px rgb(135, 135, 243);
+}
+
+
+option {
+	background-color: rgba(21, 20, 22, 0.897);
+}
+
+.radio-box {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 10px;
+	align-items: center;
+	max-width: 400px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.radio-box p {
+	color: white;
+}
+
+.one {
+	margin-right: 10px;
+}
+
+#upload-box {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#choose_file {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer;
+}
+
+
+#upload_btn {
+	height: 40px;
+	width: 150px;
+	background-color: aqua;
+	color: rgb(46, 41, 41);
+	border: none;
+	outline: none;
+	font-size: large;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+#submit {
+	height: 35px;
+	width: 100%;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: #0f9b0f;
+	margin-top: 20px;
+	border-radius: 10px;
+	color: white;
+	font-size: 15px;
+}
+
+#submit:hover {
+	background-color: darkgreen;
+}
+
+#write {
+	height: 100px;
+	width: 100%;
+}
+
+#final_check {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	row-gap: 5px;
+}
+
+
+@media (max-width: 425px) {
+	#bg-box {
+		width: 100%;
+		flex-direction: column;
+		padding: 10px;
+	}
+
+	#outer-box {
+		width: 100%;
+		margin-top: 0px;
+		overflow-y: scroll;
+	}
+
+	#title-box {
+		width: 100%;
+	}
+
+	#form-box {
+		width: 100%;
+		padding: 15px;
+	}
+
+	.in_put,
+	#option-box-one,
+	#option_box,
+	#submit {
+		width: 100%;
+		/* Ensures inputs take full width */
+	}
+
+	#upload_btn {
+		width: 100%;
+	}
+}
+
+@media (max-width: 320px) {
+	#bg-box {
+		width: 100%;
+		flex-direction: column;
+		/* Ensures content stacks */
+		padding: 10px;
+	}
+
+	#outer-box {
+		width: 100%;
+		margin-top: 0px;
+		overflow-y: scroll;
+	}
+
+	#title-box {
+		width: 100%;
+	}
+
+	#form-box {
+		width: 100%;
+		padding: 15px;
+	}
+
+	.in_put,
+	#option-box-one,
+	#option_box,
+	#submit {
+		width: 100%;
+	}
+
+	#upload_btn {
+		width: 100%;
+	}
+}
+
+@media (max-width: 884px) {
+	#outer-box {
+		margin-top: 50px;
+	}
+}
